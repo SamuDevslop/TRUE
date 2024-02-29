@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUE - Iniciar sesión</title>
+    <style>
+        /* Reset de estilos para eliminar márgenes y rellenos predeterminados */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            animation: backgroundAnimation 20s infinite alternate;
+        }
+
+        header {
+            background-color: #121a32;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            animation: headerAnimation 2s infinite alternate;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        header h1 span {
+            color: #54a0ff;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            border-radius: 0 0 5px 5px;
+            padding: 10px;
+            width: 150px;
+        }
+
+        header nav ul li:hover ul {
+            display: block;
+        }
+
+        header nav ul li ul li {
+            display: block;
+            margin: 5px 0;
+        }
+
+        header nav ul li ul li a {
+            color: #fff;
+        }
+
+        main {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: mainAnimation 2s infinite alternate;
+        }
+
+        main h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: h1Animation 2s infinite alternate;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        form input[type="email"],
+        form input[type="password"],
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #121a32;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0a0f23;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            animation: pAnimation 2s infinite alternate;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #121a32;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            animation: footerAnimation 2s infinite alternate;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-media img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media img:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #f0f0f0;
+            }
+            100% {
+                background-color: #d9d9d9;
+            }
+        }
+
+        @keyframes headerAnimation {
+            0% {
+                background-color: #121a32;
+            }
+            100% {
+                background-color: #1f2e61;
+            }
+        }
+
+        @keyframes mainAnimation {
+            0% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(5px);
+            }
+        }
+
+        @keyframes h1Animation {
+            0% {
+                font-size: 3em;
+            }
+            100% {
+                font-size: 3.2em;
+            }
+        }
+
+        @keyframes pAnimation {
+            0% {
+                color: #333;
+            }
+            100% {
+                color: #666;
+            }
+        }
+
+        @keyframes footerAnimation {
+            0% {
+                background-color: #121a32;
+            }
+            100% {
+                background-color: #1f2e61;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><span>TRUE</span></h1>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Hombre</a>
+                <ul>
+                    <li><a href="#">Camisas</a></li>
+                    <li><a href="#">Pantalones</a></li>
+                    <li><a href="#">Chaquetas</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mujer</a>
+                <ul>
+                    <li><a href="#">Vestidos</a></li>
+                    <li><a href="#">Faldas</a></li>
+                    <li><a href="#">Blusas</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Niños</a>
+                <ul>
+                    <li><a href="#">Ropa de bebé</a></li>
+                    <li><a href="#">Ropa de niño</a></li>
+                    <li><a href="#">Ropa de niña</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Iniciar sesión</h1>
+    <form action="#" method="POST">
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        
+        <input type="submit" value="Iniciar sesión">
+    </form>
+
+    <p>O inicia sesión con:</p>
+    <div class="social-media">
+        <a href="#"><img src="facebook_logo.png" alt="Facebook"></a>
+        <a href="#"><img src="gmail_logo.png" alt="Gmail"></a>
+    </div>
+</main>
+
+<footer>
+    <p style="font-family: Arial, sans-serif;">© TRUE.</p>
+</footer>
+
+</body>
+</html>
+
